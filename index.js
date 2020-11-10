@@ -21,8 +21,13 @@ app.get( "/", (req, res) => {
 } )
 
 app.get( "/users", (req, res) => {
+    const arr = JSON.parse( importData)
+    const body = {
+        count: arr.length,
+        data:  arr}
     res.status(200)
-    res.send(importData)
+    res.send(JSON.stringify(body))
+
 } )
 
 app.listen(port , () => {
