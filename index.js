@@ -24,7 +24,7 @@ app.get( "/users", (req, res) => {
     const arr = JSON.parse( importData)
     const body = {
         count: arr.length,
-        data:  arr}
+        data:  JSON.stringify( arr)}
     res.status(200)
     res.send(JSON.stringify(body))
 
