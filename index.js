@@ -21,12 +21,15 @@ app.get( "/", (req, res) => {
 } )
 
 app.get( "/users", (req, res) => {
-    const arr = JSON.parse( importData)
+    console.log(req);
+    console.log( importData);
+     const arr = [ ...importData];
     const body = {
         count: arr.length,
-        data:  JSON.stringify( arr)}
+        data: arr};
+    console.log(body);
     res.status(200)
-    res.send(importData)
+    res.send(body)
 
 } )
 
