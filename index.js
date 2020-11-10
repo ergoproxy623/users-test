@@ -26,7 +26,7 @@ app.get( "/users", (req, res) => {
         count: arr.length,
         data:  JSON.stringify( arr)}
     res.status(200)
-    res.send(JSON.stringify(body))
+    res.send(importData)
 
 } )
 
